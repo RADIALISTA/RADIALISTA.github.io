@@ -41,6 +41,7 @@ body {background: #000000;}
     overflow-x: auto;
     position: absolute;
     bottom: 0px;
+    overflow: hidden;
 }
 
 .pilares {
@@ -58,6 +59,7 @@ body {background: #000000;}
     position: absolute;
     bottom: 250px;
     height: 150px;
+    overflow: hidden;
     animation: floating 4s;    
     animation-iteration-count: infinite;
 }
@@ -68,7 +70,8 @@ body {background: #000000;}
     cursor: grab;
     margin: 25px 225px auto 225px;
     background: transparent;
-    border: none
+    border: none;
+    overflow: hidden;
 }
 
 .obj img {
