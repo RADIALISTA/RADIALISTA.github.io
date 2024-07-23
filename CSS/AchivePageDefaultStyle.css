@@ -1,0 +1,98 @@
+/* Default page used in the many achivements pages. */
+
+/* Configuração de espaços e deixa tudo verde! */
+
+body {background-color: #171717; font-family: "ComputerFont";}
+
+h1, p {color: lime; padding: 0px 15px 0px 15px; overflow-wrap: anywhere; display: inline-block;}
+
+hr, div {border: 2px solid lime; margin: 0px;}
+
+.TransparentDiv {border: transparent;}
+
+/* Configura DIVs a baixo da descrição. */
+
+#ContainerDiv {display: flex; border: transparent;}
+
+.Flex-Child:first-child {width: 25%; text-align: unset;}
+
+.Flex-Child {border: 2px solid lime; width: 75%; height: auto; margin: 8px; text-align: center;} 
+
+/* Botão de sair */
+
+#exit {color:red; text-decoration:none; position:absolute; cursor:pointer; right:50px;}
+
+/* Image & buttons */
+
+#image {
+    max-width: 500px;
+    max-height: 500px;
+    padding: 20px;
+    filter: grayscale(100%) sepia(100%) hue-rotate(80deg);
+    }
+
+.imgbutton {
+    color: lime;
+    font-size: 90px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0px 18px 0px 18px;
+    border: 3px solid lime;
+    }
+
+/* Overlays */
+
+#CrtOverlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px;
+    background-image: url('../assets/Visuals/overlay.png');
+    background-position-y: 0px;
+    background-size: 96px;
+    z-index: 2;
+    animation: crtMove 8s infinite;
+    animation-timing-function: linear;
+    pointer-events: none;
+}
+
+#StaticOverlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px;
+    background-image: url('../assets/Visuals/static.gif');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    animation: fade 2s forwards;
+}
+
+@keyframes fade {
+    0% {opacity:1;}
+    25% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes crtMove {
+    0% {background-position-y: 0px;}
+    100% {background-position-y: 96px;}
+}
+
+/* Fonte */
+
+@font-face {
+  font-family: "ComputerFont";
+  src: url("../assets/Fonts/IBM_EGA_8x14.woff");
+}

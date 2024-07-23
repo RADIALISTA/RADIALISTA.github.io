@@ -1,0 +1,59 @@
+body {background: #b3b3b3;}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
+    display: none;
+}
+
+/* Pop up window */
+
+#popup-window {
+    width: 520px;
+    height: 190px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+}
+
+.popup p {
+    text-align: center;
+}
+
+.popup b {
+    position: fixed;
+    bottom: -1%;
+    right: 0;
+    padding: 1px;
+    color: black;
+}
+
+#construction {
+    position: relative;
+    top: 30px;
+    background-image: url('../assets/Visuals/construction.gif');
+    height: 52px;  
+    width: 102px;
+    border: 1px solid black;
+}
+
+/* Animation */
+
+@keyframes shaking {
+    0% { transform: translate(-50%, -50%) }
+    20% { transform: translate(-49.5%, -50.5%) }
+    40% { transform: translate(-51%, -49.5%) }
+    60% { transform: translate(-50%, -51%) }
+    80% { transform: translate(-49.2%, -49.5%) }
+    100% { transform: translate(-50.5%, -51%) }
+}

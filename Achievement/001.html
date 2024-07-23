@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>001 - This website!</title>
+        <meta charset="UTF-8">
+        <link id="favicon" rel="icon" href="../assets/Visuals/purpleblob.gif" type="image/x-icon">
+        <link href="../CSS/AchivePageDefaultStyle.css" rel="stylesheet" type="text/css" media="all">
+        <script> 
+            //Creates a var with the value that represents the images.
+            var currentImage = 0;
+            
+            //Set the text for each image:
+            const textos = [
+                //Texto 1
+                "This was the first homepage I Made for the website. (Actually, at the time I am writing this, it still is the homepage, but I have plans to move it to a “Blog” section and create a more complex one.) It's simple and very nice in my opinion! Be aware about the “birds”!",
+
+                //Texto 2
+                "Fun fact! (Maybe not so fun fact...) I'm coding all of this in a chromebook!! Using… the “notepad”... I might be getting CRAZY!?!? Nah, but it isn't that bad. Or maybe I just don't know what a real coding program looks like!",
+
+                //Texto 3
+                "But why do I have a chromebook you might be wondering… As I said, I started making this website while I was in my second year at high school! My school didn't have any books! It was all digital! So they gave us chromebooks! (Well, mine I bought to be honest… I don't want to have something that isn’t technically mine, you know?) So when i was bored I just started programing and F*** off school! (I don't recommend doing this if you want to have good grades at school, of course!)"];
+
+            //This function is ran every time a button is clicked, selecting the images by the value of "currentImage".
+            //The texts will be selected acording to the constant "textos".
+            //Set “src” as the image you want to display.
+            function changeImage() {
+                if (currentImage == 0) {
+                    document.getElementById("image").src="../assets/Blog_Images/Achieve_Images/Homepage.png";
+                    document.getElementById("description").innerText = textos[0];
+                } 
+                else if (currentImage == 1) {
+                    document.getElementById("image").src="../assets/Blog_Images/Achieve_Images/Program.png";
+                    document.getElementById("description").innerText = textos[1];
+                } 
+                else if (currentImage == 2) {
+                    document.getElementById("image").src="../assets/Blog_Images/Achieve_Images/Classroom.jpg";
+                    document.getElementById("description").innerText = textos[2];
+                } 
+                else if (currentImage > 2) {
+                    currentImage = 0;
+                    document.getElementById("image").src="../assets/Blog_Images/Achieve_Images/Homepage.png";
+                    document.getElementById("description").innerText = textos[0];
+                } 
+                else if (currentImage < 0) {
+                    currentImage = 2;
+                    document.getElementById("image").src="../assets/Blog_Images/Achieve_Images/Classroom.jpg";
+                    document.getElementById("description").innerText = textos[2];
+                } 
+                else {
+                }
+
+                //Test purpose only!
+                console.log(currentImage);
+            }
+            
+            //Run when the right button is clicked.
+            function Next() {
+                ++currentImage;
+                changeImage();
+            }
+
+            //Run when the left button is clicked.
+            function Back() {
+                currentImage--;
+                changeImage();
+            }
+        </script>
+    </head>
+    <body onLoad="changeImage()">
+        <!-- Set the tittle here: -->
+        <h1>
+            001 - raditheradi.neocities.org
+            <a href="../Achievements.html" id="exit" type="button">X</a>
+        </h1>
+        <hr>
+        <!-- Fixed text here: -->
+        <div class="TransparentDiv">
+            <p>&emsp;I think the best way to start this “achievements” thing is by talking about the website itself! This is a small project that I started making while I was in my second year at high school. It's supposed to be like an “ideas dump”! Made just for sharing ideas and most important: Learn more coding! I also have plans for making a portfolio with this…</p>
+        </div>
+        <hr>
+        <!-- This will be set by the script when the page loads. -->
+        <div id="ContainerDiv">
+            <div class="Flex-Child">
+                <p id="description"></p>
+            </div>
+            <table class="Flex-Child">
+                <tr>
+                    <td><button class="imgbutton" type="button" onclick="Back();">&#8678;</button></td>
+                    <td><img id="image"></td> 
+                    <td><button class="imgbutton" type="button" onclick="Next();">&#8680;</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Overlays -->
+        <div id="CrtOverlay"></div>
+        <div id="StaticOverlay"></div>
+    </body>
+</html>
