@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hall of achievements</title>
+        <link id="favicon" rel="icon" href="assets/Visuals/purpleblob.gif" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/AchiveCSS.css" rel="stylesheet" type="text/css" media="all">
+        <script>
+            // var SoundEffect = new Audio('assets/Sounds/');
+            function CallTab() {
+                document.getElementById("tablet_overlay").style.display = "block";
+            }
+            
+            function I001() {
+                setTimeout(() => {window.location.href = "Achievement/001.html";}, 630);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="tablet_overlay"></div>
+        <a href="HomePage.html" id="exit" type="button"><strong>Exit</strong></a>
+        <div id="PilarScroll">
+            <img class="pilares" src="assets/Visuals/Pilar_1.png">
+            <img class="pilares" src="assets/Visuals/Pilar_2.png">
+            <img class="pilares" src="assets/Visuals/Pilar_3.png">
+            <img class="pilares" src="assets/Visuals/Pilar_1.png">
+            <img class="pilares" src="assets/Visuals/Pilar_2.png">
+            <img class="pilares" src="assets/Visuals/Pilar_3.png">
+            <img class="pilares" src="assets/Visuals/Pilar_1.png">
+            <img class="pilares" src="assets/Visuals/Pilar_2.png">
+            <img class="pilares" src="assets/Visuals/Pilar_3.png">
+        </div>
+        <div id="ObjScroll">
+            <button  class="obj" type="button" onclick="CallTab(); I001();"><img src="assets/Visuals/purpleblob.gif"></button>
+            <button class="obj" type="button"></button>
+            <button class="obj" type="button"></button>
+        </div>
+    </body>
+</html>
