@@ -17,6 +17,16 @@
             td {display: flex;}
             #exclama {width: 14px; height: 40px; vertical-align: -25%;} /* Gif de exclamação */
             #joni {width: 195px; height: 260px; margin: 20px;} /* Foto do Joni */
+
+            #content-desktop {display: block;}
+            #content-mobile {display: none;}
+
+            @media screen and (max-width: 768px) {
+                #content-desktop {display: none;}
+                #content-mobile {display: block;}
+                #joni {width: 195px; height: 260px; display: block; margin: 0 auto;}
+            }
+
         </style>   
     </head>
     
@@ -37,7 +47,7 @@
             <tr>
                 <td>
                     <p>
-                        Sabe os banheiros localizados embaixo desta sala de aula? Então, se esta válvula foi fechada, os banheiros ficarão sem água! Então se você já fechou a válvula, acho bom abri-la novamente! Pois no momento que Joni perceber isto, ele estará a caminho da sala! Agora que sabe disso, utilize isso ao seu favor! (Brincadeira, não faça isso.)
+                        Sabe os banheiros localizados embaixo desta sala de aula? Então, se esta válvula foi fechada, os banheiros ficar sem água! Então se você já fechou a válvula, acho bom abri-la novamente! Pois no momento que Joni perceber isto, ele estará a caminho da sala! Agora que sabe disso, utilize isso ao seu favor! (Brincadeira, não faça isso.)
                     </p>
                 </td>
             </tr>
@@ -46,6 +56,19 @@
             <tr>
                 <td>
                     <img id="joni" src="../assets/Blog_Images/Achieve_Images/joni.jpg" title="Joni com cara de desconfiado..." alt="Joni">
+                    <p id="content-desktop">
+                        Joni é (ou era) um funcionário da escola, cujo posso afirmar que ele é um “faz tudo”! E você que está lendo isso, sempre diga bom dia ao Joni! Admito que vou sentir saudades dos “bons-dias” dele. E caso você que está lendo isso seja o Joni, saiba que sem perceber, você já me alegrou diversas vezes!
+                        <br>
+                        <br>
+                        Espero que você, leitor, tenha um ótimo ano letivo. Espero que o Bonaparte (informalmente conhecido como Objetivo) esteja em uma situação melhor do que quando entrei. Não é difícil descobrir quem sou, mas entrei na 1° série na escola. E  agora em 2024 estou  finalizando meu 3° ano de ensino médio. 
+                        <br>
+                        <br>
+                        Espero que tudo esteja certo por ai! Cuidem-se!
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td id="content-mobile">
                     <p>
                         Joni é (ou era) um funcionário da escola, cujo posso afirmar que ele é um “faz tudo”! E você que está lendo isso, sempre diga bom dia ao Joni! Admito que vou sentir saudades dos “bons-dias” dele. E caso você que está lendo isso seja o Joni, saiba que sem perceber, você já me alegrou diversas vezes!
                         <br>
