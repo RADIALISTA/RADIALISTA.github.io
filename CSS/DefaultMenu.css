@@ -1,8 +1,10 @@
-/* Itens da estrutura da pagina principal */
 
-body {background-image: url("../assets/Visuals/SkyBackground.jpg");
-      background-size: 220px 220px;
-      background-repeat: repeat;
+/* Itens da estrutura da pagina principal */
+body {
+    background-image: url("../assets/Visuals/SkyBackground.jpg");
+    background-size: 220px 220px;
+    background-repeat: repeat;
+    animation: cloudsMove 45s infinite linear;
 }
 
 .box {
@@ -26,6 +28,17 @@ body {background-image: url("../assets/Visuals/SkyBackground.jpg");
 .head img {width: 48px; height: 48px;} /* Smile faces */
 
 
+/* Warnings */
+div.warn {
+    background-color: #ede4dc;
+    border: 3px solid rgb(59, 27, 17);
+    width: 50%;
+    margin: 10px auto 10px;
+    text-align: center;
+    margin: 10px auto 14px;
+    display: block;
+}
+
 /* Posts tipo 1 */ 
 .post1 h2 {margin:20px 0 4px; font-size: 23px;}
 
@@ -41,8 +54,8 @@ span {display: flex;}
 
 #Vcr{width: 280px; height: 30%;}
 
-/* About me elements */ 
 
+/* About me elements */ 
 #title {
     display: block;
     width: 52%;
@@ -87,8 +100,14 @@ nav {
 }
 
 
-/* Elementos Bird */
+/* Animações */
+@keyframes cloudsMove {
+    0% {background-position: 0px 0px;}
+    100% {background-position: 220px 220px;}
+}
 
+
+/* ---- Elementos Bird ---- */
 #bird {
     background-image: url('../assets/Visuals/flying_eye.gif');
     background-color: transparent;
